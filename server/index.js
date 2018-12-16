@@ -7,7 +7,7 @@ const router = require('./router');
 const app = express();
 const port = 4000;
 
-app.use(morgan('default'));
+app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.use('/app', bodyParser.json());
